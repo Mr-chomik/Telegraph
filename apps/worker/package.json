@@ -1,0 +1,26 @@
+{
+  "name": "@fun/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "tg:login": "tsx src/scripts/tg-login.ts",
+    "pipeline:run": "tsx src/scripts/pipeline.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@fun/core": "*",
+    "@fun/db": "*",
+    "dotenv": "^17.2.0",
+    "node-cron": "^4.0.0",
+    "telegram": "^2.26.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.0"
+  }
+}

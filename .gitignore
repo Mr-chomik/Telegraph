@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+build/
+out/
+output/
+**/.next/
+
+# Generated Prisma client
+packages/db/generated/
+
+# Local project context / docs (private)
+PROJECT_CONTEXT.md
+
+# Screenshots / local captures
+gallery/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Runtime data
+data/
+**/data/
+
+# Environment / secrets
+.env
+.env.local
+*.env.local
+
+# Test artifacts
+test-results/
+playwright-report/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

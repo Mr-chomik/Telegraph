@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": false,
+    "noEmit": true,
+    "types": ["node"],
+    "baseUrl": "."
+  },
+  "include": ["src", "generated/prisma", "prisma.config.ts", "prisma"]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "fun",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Free AI-powered Telegram digital newspaper — automated editorial engine",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev:web",
+    "dev:web": "npm -w @fun/web run dev",
+    "dev:worker": "npm -w @fun/worker run dev",
+    "tg:login": "npm -w @fun/worker run tg:login",
+    "pipeline:run": "npm -w @fun/worker run pipeline:run",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "e2e": "playwright test",
+    "db:generate": "npm -w @fun/db run db:generate",
+    "db:migrate": "npm -w @fun/db run db:migrate",
+    "db:push": "npm -w @fun/db run db:push",
+    "db:seed:demo": "npm -w @fun/db run db:seed:demo"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "eslint": "^9.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.0",
+    "typescript-eslint": "^8.40.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
