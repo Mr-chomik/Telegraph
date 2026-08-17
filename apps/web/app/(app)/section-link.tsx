@@ -1,4 +1,4 @@
-import type { Edition } from "@fun/db";
+import type { Edition } from "@telegraph/db";
 
 export function SectionLink({
   edition,

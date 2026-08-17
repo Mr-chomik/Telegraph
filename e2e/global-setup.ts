@@ -76,5 +76,5 @@ export default async function globalSetup(): Promise<void> {
   // Fresh, deterministic data: reset schema → migrate → seed → run editorial jobs.
   run("npx tsx e2e/setup-data.ts");
 
-  console.log("[setup] demo data ready (demo@fun.app / demo1234)");
+  console.log("[setup] demo data ready (demo@telegraph.app / demo1234)");
 }

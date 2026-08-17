@@ -1,4 +1,4 @@
-import { Prisma } from "@fun/db";
+import { Prisma } from "@telegraph/db";
 import {
   aiRefinementEnabled,
   applyAiModifier,
@@ -21,7 +21,7 @@ import {
   spamScores,
   sourcesDisagree,
   writeEditorial,
-} from "@fun/core";
+} from "@telegraph/core";
 import { db } from "../db";
 import type { JobContext } from "../scheduler";
 

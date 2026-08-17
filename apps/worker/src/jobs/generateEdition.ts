@@ -1,4 +1,4 @@
-import { Prisma } from "@fun/db";
+import { Prisma } from "@telegraph/db";
 import {
   buildEditionLayout,
   editionLabel,
@@ -7,7 +7,7 @@ import {
   log,
   totalPages,
   type PlacedStory,
-} from "@fun/core";
+} from "@telegraph/core";
 import { db } from "../db";
 import type { JobContext } from "../scheduler";
 

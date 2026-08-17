@@ -4,7 +4,7 @@ import { destroySession } from "@/lib/session";
 export async function POST(): Promise<Response> {
   await destroySession();
   const res = NextResponse.redirect(new URL("/login", requestUrl()));
-  res.cookies.delete("fun_session");
+  res.cookies.delete("telegraph_session");
   return res;
 }
 

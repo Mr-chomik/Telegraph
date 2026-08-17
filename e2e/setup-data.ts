@@ -1,6 +1,6 @@
 import { execSync } from "node:child_process";
 import path from "node:path";
-import { prisma, type PrismaClient } from "@fun/db";
+import { prisma, type PrismaClient } from "@telegraph/db";
 import { registerJobHandlers } from "../apps/worker/src/jobs";
 import { todayDate } from "../apps/worker/src/scheduler";
 
@@ -93,7 +93,7 @@ async function main(): Promise<void> {
   await db.$disconnect();
 
   console.log("[setup-data] applying migrations…");
-  run("npm -w @fun/db run db:deploy");
+  run("npm -w @telegraph/db run db:deploy");
 
   console.log("[setup-data] seeding demo data…");
   run("npm run db:seed:demo");
@@ -109,7 +109,7 @@ async function main(): Promise<void> {
   await handlers.generateEdition({ kind: "MORNING", date: todayDate() }, { signal: "manual" });
 
   // Pin the demo account to English so the e2e suite is deterministic.
-  const demo = await db.user.findUnique({ where: { email: "demo@fun.app" } });
+  const demo = await db.user.findUnique({ where: { email: "demo@telegraph.app" } });
   if (demo) {
     await db.userPreference.upsert({
       where: { userId: demo.id },

@@ -1,4 +1,4 @@
-import { getEnv, log } from "@fun/core";
+import { getEnv, log } from "@telegraph/core";
 import { registerJobHandlers } from "../jobs";
 import { todayDate } from "../scheduler";
 import { closeDb } from "../db";

@@ -1,8 +1,8 @@
 import "server-only";
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { prisma } from "@fun/db";
-import { fetchChannelPreview, normalizeTelegramUsername } from "@fun/core";
+import { prisma } from "@telegraph/db";
+import { fetchChannelPreview, normalizeTelegramUsername } from "@telegraph/core";
 import { getSession } from "@/lib/session";
 import { rateLimiter, requestKey } from "@/lib/rate-limit";
 

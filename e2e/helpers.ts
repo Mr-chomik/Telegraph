@@ -1,6 +1,6 @@
 import { type Page } from "@playwright/test";
 
-export const DEMO_EMAIL = "demo@fun.app";
+export const DEMO_EMAIL = "demo@telegraph.app";
 export const DEMO_PASSWORD = "demo1234";
 
 export async function login(page: Page, email = DEMO_EMAIL, password = DEMO_PASSWORD): Promise<void> {

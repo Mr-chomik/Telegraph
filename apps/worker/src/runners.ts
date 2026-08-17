@@ -1,5 +1,5 @@
-import { prisma } from "@fun/db";
-import { log } from "@fun/core";
+import { prisma } from "@telegraph/db";
+import { log } from "@telegraph/core";
 import { Scheduler } from "./scheduler";
 import { registerJobHandlers } from "./jobs";
 

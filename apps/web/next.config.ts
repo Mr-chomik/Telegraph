@@ -8,7 +8,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..")
 dotenv.config({ path: path.join(root, ".env") });
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@fun/core", "@fun/db"],
+  transpilePackages: ["@telegraph/core", "@telegraph/db"],
   images: {
     // Telegram-hosted media is referenced by absolute https URLs.
     remotePatterns: [{ protocol: "https", hostname: "**" }],

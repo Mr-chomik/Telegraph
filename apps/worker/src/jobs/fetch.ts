@@ -1,5 +1,5 @@
-import { Prisma } from "@fun/db";
-import { fetchFreshnessHours, getEnv, isTelegramConfigured, log, normalizePost } from "@fun/core";
+import { Prisma } from "@telegraph/db";
+import { fetchFreshnessHours, getEnv, isTelegramConfigured, log, normalizePost } from "@telegraph/core";
 import { db } from "../db";
 import { TelegramManager } from "../telegram/client";
 import { PublicPreviewManager } from "../telegram/publicPreview";

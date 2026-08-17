@@ -1,4 +1,4 @@
-// Fun — Prisma schema (PostgreSQL). Single source of truth for the database.
+// Telegraph — Prisma schema (PostgreSQL). Single source of truth for the database.
 // Prisma ORM v7: datasource url moved to prisma.config.ts; client generated via
 // the new `prisma-client` generator into ./generated/prisma.
 

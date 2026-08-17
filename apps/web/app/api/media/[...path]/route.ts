@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import { getEnv } from "@fun/core";
+import { getEnv } from "@telegraph/core";
 
 /**
  * Serve locally downloaded Telegram photos (data/media/<channel>_<id>.jpg)

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import { prisma } from "@fun/db";
+import { prisma } from "@telegraph/db";
 import { SettingsForm } from "@/components/settings-form";
 import { SourcesPreferences } from "@/components/sources-preferences";
 import { getMySources } from "@/lib/my-sources";

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@fun/db";
+import { prisma } from "@telegraph/db";
 import { loginSchema, parseJsonBody } from "@/lib/validators";
 import { verifyPassword } from "@/lib/password";
 import { createSession, setSessionCookie } from "@/lib/session";

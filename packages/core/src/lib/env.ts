@@ -81,7 +81,7 @@ export function getEnv(overrides: NodeJS.ProcessEnv = process.env): AppEnv {
   const apiIdRaw = e.TELEGRAM_API_ID?.trim();
   const dataDir = e.DATA_DIR ?? "./data";
   return {
-    databaseUrl: e.DATABASE_URL ?? "postgresql://fun:fun@localhost:5432/fun?schema=public",
+    databaseUrl: e.DATABASE_URL ?? "postgresql://telegraph:telegraph@localhost:5432/telegraph?schema=public",
     sessionSecret: e.SESSION_SECRET ?? "dev-only-insecure-secret",
     adminEmails: toBoolLikeList(e.ADMIN_EMAILS),
     defaultLanguage: e.DEFAULT_LANGUAGE === "en" ? "en" : "ru",

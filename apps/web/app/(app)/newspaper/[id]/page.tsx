@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
-import { prisma } from "@fun/db";
+import { prisma } from "@telegraph/db";
 import { NewspaperViewer } from "@/components/newspaper/newspaper-viewer";
 import type { ViewerArticle, ViewerEdition } from "@/components/newspaper/types";
 import { getSession } from "@/lib/session";

@@ -1,8 +1,8 @@
-# Fun — AI-powered Telegram digital newspaper
+# Telegraph — AI-powered Telegram digital newspaper
 
 **Read this in [Русский](README_RU.md)**
 
-Fun is a self-hosted digital newspaper assembled automatically from Telegram
+Telegraph is a self-hosted digital newspaper assembled automatically from Telegram
 channels. It ingests raw posts, deduplicates and clusters them into stories,
 writes article copy, typesets a real newspaper (front page, sections, light
 reading), and serves it as a web app with an authentic print aesthetic.
@@ -144,7 +144,7 @@ docker compose up -d db
 
 # 3. Install and prepare the database
 npm install
-npm -w @fun/db run db:deploy   # apply migrations
+npm -w @telegraph/db run db:deploy   # apply migrations
 npm run db:seed:demo           # categories + real public Telegram channels + admin user
 
 # 4. Collect real news and produce today's paper (needs a reachable t.me)
@@ -160,7 +160,7 @@ npm run dev:web                # http://localhost:3000
 npm run dev:worker             # scheduled jobs (fetch/process/editions/cleanup)
 ```
 
-Sign in with the seeded demo admin: **`demo@fun.app` / `demo1234`** (local demos only).
+Sign in with the seeded demo admin: **`demo@telegraph.app` / `demo1234`** (local demos only).
 
 ## CI
 
@@ -222,7 +222,7 @@ starts Ollama on port 11434.
 
 **MIT License** — see [`LICENSE`](LICENSE).
 
-Demo credentials exist for offline evaluation only (`demo@fun.app` / `demo1234`). The seed intentionally contains **no
+Demo credentials exist for offline evaluation only (`demo@telegraph.app` / `demo1234`). The seed intentionally contains **no
 placeholder news**: it ships real public channels (bbbreaking, rbc_news, readovkanews,
 tjournal, nplus1, sportexpress, kinopoisk, mash, banksta) and the paper is produced from
 live Telegram posts via `npm run pipeline:run`. Login/register rate limiting

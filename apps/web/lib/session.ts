@@ -1,9 +1,9 @@
 import "server-only";
 import { createHash, randomBytes } from "node:crypto";
 import { cookies } from "next/headers";
-import { prisma } from "@fun/db";
+import { prisma } from "@telegraph/db";
 
-export const SESSION_COOKIE = "fun_session";
+export const SESSION_COOKIE = "telegraph_session";
 const SESSION_TTL_SECONDS = 30 * 24 * 60 * 60; // 30 days
 
 export interface SessionUser {

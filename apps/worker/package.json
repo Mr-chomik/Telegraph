@@ -1,5 +1,5 @@
 {
-  "name": "@fun/worker",
+  "name": "@telegraph/worker",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -13,8 +13,8 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "@fun/core": "*",
-    "@fun/db": "*",
+    "@telegraph/core": "*",
+    "@telegraph/db": "*",
     "dotenv": "^17.2.0",
     "node-cron": "^4.0.0",
     "telegram": "^2.26.0"

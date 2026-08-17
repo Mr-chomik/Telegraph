@@ -1,5 +1,5 @@
 {
-  "name": "@fun/db",
+  "name": "@telegraph/db",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -18,7 +18,7 @@
     "lint": "eslint src prisma"
   },
   "dependencies": {
-    "@fun/core": "*",
+    "@telegraph/core": "*",
     "@prisma/adapter-pg": "^7.9.1",
     "@prisma/client": "^7.9.1",
     "bcryptjs": "^3.0.3",

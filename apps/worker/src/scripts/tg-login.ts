@@ -3,7 +3,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { TelegramClient } from "telegram";
 import { StringSession } from "telegram/sessions/index.js";
-import { getEnv, log } from "@fun/core";
+import { getEnv, log } from "@telegraph/core";
 
 const prompt = (rl: ReturnType<typeof createInterface>, q: string): Promise<string> =>
   new Promise((resolve) => rl.question(q, resolve));

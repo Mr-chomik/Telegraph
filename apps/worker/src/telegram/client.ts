@@ -3,7 +3,7 @@ import path from "node:path";
 import { TelegramClient } from "telegram";
 import { StringSession } from "telegram/sessions/index.js";
 import { Api } from "telegram/tl/api.js";
-import { log } from "@fun/core";
+import { log } from "@telegraph/core";
 
 export interface ResolvedChannel {
   id: string;

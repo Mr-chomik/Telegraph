@@ -1,4 +1,4 @@
-import { prisma } from "@fun/db";
+import { prisma } from "@telegraph/db";
 import { registerJobHandlers } from "../apps/worker/src/jobs";
 import { todayDate } from "../apps/worker/src/scheduler";
 
@@ -16,7 +16,7 @@ async function main(): Promise<void> {
 
   // Pin the demo account to English so the e2e suite is deterministic.
   const db = prisma();
-  const demo = await db.user.findUnique({ where: { email: "demo@fun.app" } });
+  const demo = await db.user.findUnique({ where: { email: "demo@telegraph.app" } });
   if (demo) {
     await db.userPreference.upsert({
       where: { userId: demo.id },

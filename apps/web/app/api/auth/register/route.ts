@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@fun/db";
-import { getEnv } from "@fun/core";
+import { prisma } from "@telegraph/db";
+import { getEnv } from "@telegraph/core";
 import { registerSchema, parseJsonBody, type RegisterInput } from "@/lib/validators";
 import { hashPassword } from "@/lib/password";
 import { createSession, setSessionCookie } from "@/lib/session";

@@ -1,5 +1,5 @@
 import "server-only";
-import { prisma } from "@fun/db";
+import { prisma } from "@telegraph/db";
 
 export const DEFAULT_WEIGHT = 5;
 

@@ -1,5 +1,5 @@
 {
-  "name": "@fun/web",
+  "name": "@telegraph/web",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -13,8 +13,8 @@
   "dependencies": {
     "@fontsource/pt-sans": "^5.2.0",
     "@fontsource/pt-serif": "^5.2.0",
-    "@fun/core": "*",
-    "@fun/db": "*",
+    "@telegraph/core": "*",
+    "@telegraph/db": "*",
     "clsx": "^2.1.1",
     "framer-motion": "^13.1.0",
     "next": "^16.3.0",

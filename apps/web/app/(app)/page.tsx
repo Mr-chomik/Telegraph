@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import { prisma } from "@fun/db";
+import { prisma } from "@telegraph/db";
 import { getSession } from "@/lib/session";
 import { SectionLink } from "./section-link";
 

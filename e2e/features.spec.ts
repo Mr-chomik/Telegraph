@@ -35,7 +35,7 @@ test.describe("settings", () => {
   test("language preference persists and drives the interface", async ({ page }) => {
     // Isolated user so the shared demo account's language stays stable for
     // parallel tests.
-    const email = `settings-${Date.now()}@fun.test`;
+    const email = `settings-${Date.now()}@telegraph.test`;
     await page.goto("/register");
     await page.fill("#name", "Settings Tester");
     await page.fill("#email", email);
@@ -81,7 +81,7 @@ test.describe("admin", () => {
   });
 
   test("non-admins are redirected away from /admin", async ({ page }) => {
-    const reader = `reader-${Date.now()}@fun.test`;
+    const reader = `reader-${Date.now()}@telegraph.test`;
     await page.goto("/register");
     await page.fill("#name", "Plain Reader");
     await page.fill("#email", reader);

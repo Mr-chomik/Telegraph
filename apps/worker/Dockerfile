@@ -13,10 +13,10 @@ RUN npm ci
 COPY tsconfig.base.json tsconfig.json ./
 COPY packages/core ./packages/core
 COPY packages/db ./packages/db
-RUN npm -w @fun/db run db:generate
+RUN npm -w @telegraph/db run db:generate
 
 COPY apps/worker ./apps/worker
 
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
-CMD ["npm", "-w", "@fun/worker", "run", "start"]
+CMD ["npm", "-w", "@telegraph/worker", "run", "start"]

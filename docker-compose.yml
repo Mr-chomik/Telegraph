@@ -3,15 +3,15 @@ services:
     image: postgres:16
     restart: unless-stopped
     environment:
-      POSTGRES_USER: fun
-      POSTGRES_PASSWORD: fun
-      POSTGRES_DB: fun
+      POSTGRES_USER: telegraph
+      POSTGRES_PASSWORD: telegraph
+      POSTGRES_DB: telegraph
     ports:
       - "5432:5432"
     volumes:
-      - fun-db-pgdata:/var/lib/postgresql/data
+      - telegraph-db-pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U fun -d fun"]
+      test: ["CMD-SHELL", "pg_isready -U telegraph -d telegraph"]
       interval: 5s
       timeout: 5s
       retries: 12
@@ -27,7 +27,7 @@ services:
     env_file: .env
     environment:
       # Inside the compose network the database host is the `db` service.
-      DATABASE_URL: postgresql://fun:fun@db:5432/fun
+      DATABASE_URL: postgresql://telegraph:telegraph@db:5432/telegraph
     ports:
       - "3000:3000"
     healthcheck:
@@ -37,7 +37,7 @@ services:
       retries: 6
       start_period: 20s
     volumes:
-      - fun-data:/app/data
+      - telegraph-data:/app/data
 
   worker:
     build:
@@ -49,9 +49,9 @@ services:
         condition: service_healthy
     env_file: .env
     environment:
-      DATABASE_URL: postgresql://fun:fun@db:5432/fun
+      DATABASE_URL: postgresql://telegraph:telegraph@db:5432/telegraph
     volumes:
-      - fun-data:/app/data
+      - telegraph-data:/app/data
 
   # Optional local LLM. Start with: docker compose --profile ai up -d
   ai:
@@ -64,6 +64,6 @@ services:
       - "11434:11434"
 
 volumes:
-  fun-db-pgdata:
-  fun-data:
+  telegraph-db-pgdata:
+  telegraph-data:
   ollama:

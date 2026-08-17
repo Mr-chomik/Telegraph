@@ -1,7 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
 /**
- * End-to-end suite for the Fun digital newspaper.
+ * End-to-end suite for the Telegraph digital newspaper.
  *
  * Data is prepared by `e2e/global-setup.ts` (PostgreSQL via docker-compose,
  * migrations, demo seed, then the process + edition jobs are run once). The web

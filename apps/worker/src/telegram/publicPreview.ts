@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { fetchChannelPreview, log, parseChannelMessages } from "@fun/core";
+import { fetchChannelPreview, log, parseChannelMessages } from "@telegraph/core";
 import type { ResolvedChannel } from "./client";
 
 const PREVIEW_URL = (username: string): string =>

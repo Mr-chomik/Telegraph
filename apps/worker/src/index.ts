@@ -1,9 +1,9 @@
-import { getEnv, log } from "@fun/core";
+import { getEnv, log } from "@telegraph/core";
 import { startScheduler } from "./runners";
 
 async function main(): Promise<void> {
   const env = getEnv();
-  log.info("fun worker starting", {
+  log.info("telegraph worker starting", {
     nodeEnv: env.nodeEnv,
     aiProvider: env.aiProvider,
     telegramConfigured: env.telegramApiId !== null && env.telegramApiHash !== null,

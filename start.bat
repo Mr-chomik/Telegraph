@@ -3,7 +3,7 @@ setlocal enabledelayedexpansion
 cd /d "%~dp0"
 
 echo ============================================
-echo  Fun - Telegram digital newspaper (demo)
+echo  Telegraph - Telegram digital newspaper (demo)
 echo ============================================
 
 REM --- 1. Node.js ---------------------------------------------------------
@@ -67,12 +67,12 @@ if not exist node_modules (
 REM --- 5. Optional fresh reset ----------------------------------------------
 if /i "%~1"=="fresh" (
   echo [INFO] Resetting database schema - fresh run...
-  docker compose exec -T db psql -U fun -d fun -c "DROP SCHEMA public CASCADE; CREATE SCHEMA public;" >nul
+  docker compose exec -T db psql -U telegraph -d telegraph -c "DROP SCHEMA public CASCADE; CREATE SCHEMA public;" >nul
 )
 
 REM --- 6. Migrations + seed + editorial jobs --------------------------------
 echo [INFO] Applying migrations...
-call npm -w @fun/db run db:deploy >nul
+call npm -w @telegraph/db run db:deploy >nul
 if errorlevel 1 ( echo [ERROR] Migrations failed. & pause & exit /b 1 )
 
 echo [INFO] Seeding demo data...
@@ -85,13 +85,13 @@ if errorlevel 1 ( echo [WARN] Edition job had issues; the app will still start. 
 
 REM --- 7. Launch apps --------------------------------------------------------
 echo [INFO] Starting web + worker...
-start "Fun Web" cmd /k "npm run dev:web"
-start "Fun Worker" cmd /k "npm run dev:worker"
+start "Telegraph Web" cmd /k "npm run dev:web"
+start "Telegraph Worker" cmd /k "npm run dev:worker"
 
 echo.
 echo ============================================
 echo  Demo:  http://localhost:3000
-echo  Login: demo@fun.app  /  demo1234
+echo  Login: demo@telegraph.app  /  demo1234
 echo  (close the two windows to stop the apps)
 echo ============================================
 timeout /t 6 /nobreak >nul

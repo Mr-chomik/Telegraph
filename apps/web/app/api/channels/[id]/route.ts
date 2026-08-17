@@ -1,7 +1,7 @@
 import "server-only";
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { prisma } from "@fun/db";
+import { prisma } from "@telegraph/db";
 import { getSession } from "@/lib/session";
 
 const updateSchema = z.object({

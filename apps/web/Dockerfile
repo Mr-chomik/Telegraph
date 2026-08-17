@@ -14,13 +14,13 @@ RUN npm ci
 COPY tsconfig.base.json tsconfig.json ./
 COPY packages/core ./packages/core
 COPY packages/db ./packages/db
-RUN npm -w @fun/db run db:generate
+RUN npm -w @telegraph/db run db:generate
 
 # Web source.
 COPY apps/web ./apps/web
 # Route handlers import Prisma client from packages/db/generated — make it resolvable.
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN npm -w @fun/web run build
+RUN npm -w @telegraph/web run build
 
 EXPOSE 3000
-CMD ["npm", "-w", "@fun/web", "run", "start"]
+CMD ["npm", "-w", "@telegraph/web", "run", "start"]

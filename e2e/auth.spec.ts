@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { login, DEMO_EMAIL } from "./helpers";
 
-const uniqueReader = `reader-${Date.now()}@fun.test`;
+const uniqueReader = `reader-${Date.now()}@telegraph.test`;
 
 test.describe("authentication", () => {
   test("registers a new account and signs in", async ({ page }) => {

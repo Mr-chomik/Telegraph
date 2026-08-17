@@ -1,5 +1,5 @@
 import { PrismaPg } from "@prisma/adapter-pg";
-import { getEnv } from "@fun/core";
+import { getEnv } from "@telegraph/core";
 import { PrismaClient } from "../generated/prisma/client";
 
 const cached = globalThis as unknown as { __funPrisma?: PrismaClient };

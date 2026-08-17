@@ -1,4 +1,4 @@
-import { prisma } from "@fun/db";
+import { prisma } from "@telegraph/db";
 
 export const db = prisma();
 

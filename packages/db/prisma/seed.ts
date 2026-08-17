@@ -1,11 +1,11 @@
 /**
- * Seed — base data for Fun.
+ * Seed — base data for Telegraph.
  *
  * Creates: default categories, a set of real public Telegram channels, and a
  * demo admin user. No placeholder posts are generated: live articles come from
  * the worker's fetch job (public t.me preview or MTProto).
  *
- * Run: `npm -w @fun/db run db:seed:demo`
+ * Run: `npm -w @telegraph/db run db:seed:demo`
  */
 import { hash } from "bcryptjs";
 import { prisma } from "../src/index";
@@ -84,10 +84,10 @@ async function main(): Promise<void> {
   // Demo admin account (email/password shown in README for local demos only).
   const passwordHash = await hash("demo1234", 12);
   await db.user.upsert({
-    where: { email: "demo@fun.app" },
+    where: { email: "demo@telegraph.app" },
     update: { passwordHash, role: "ADMIN" },
     create: {
-      email: "demo@fun.app",
+      email: "demo@telegraph.app",
       name: "Demo Admin",
       passwordHash,
       role: "ADMIN",
@@ -96,7 +96,7 @@ async function main(): Promise<void> {
 
   // Subscribe the demo user to every source (weight 5 = standard) so the
   // personal digest and the source-mix settings have a sensible default.
-  const demoUser = await db.user.findUnique({ where: { email: "demo@fun.app" } });
+  const demoUser = await db.user.findUnique({ where: { email: "demo@telegraph.app" } });
   if (demoUser) {
     const allChannelIds = await db.channel.findMany({ select: { id: true } });
     await db.channelSubscription.createMany({
@@ -117,7 +117,7 @@ async function main(): Promise<void> {
       2,
     ),
   );
-  console.log("Demo account: demo@fun.app / demo1234");
+  console.log("Demo account: demo@telegraph.app / demo1234");
 }
 
 main()

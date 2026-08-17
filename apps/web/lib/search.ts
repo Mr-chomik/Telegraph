@@ -1,5 +1,5 @@
 import "server-only";
-import { Prisma, prisma } from "@fun/db";
+import { Prisma, prisma } from "@telegraph/db";
 
 export interface SearchResult {
   articleId: string;

@@ -1,5 +1,5 @@
 import { db } from "../db";
-import { getEnv, log } from "@fun/core";
+import { getEnv, log } from "@telegraph/core";
 
 /**
  * Retention cleanup — removes editions (and their articles) older than the

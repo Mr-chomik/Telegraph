@@ -12,18 +12,18 @@ jobs:
       postgres:
         image: postgres:16
         env:
-          POSTGRES_USER: fun
-          POSTGRES_PASSWORD: fun
-          POSTGRES_DB: fun
+          POSTGRES_USER: telegraph
+          POSTGRES_PASSWORD: telegraph
+          POSTGRES_DB: telegraph
         ports:
           - 5432:5432
         options: >-
-          --health-cmd "pg_isready -U fun -d fun"
+          --health-cmd "pg_isready -U telegraph -d telegraph"
           --health-interval 5s
           --health-timeout 5s
           --health-retries 12
     env:
-      DATABASE_URL: postgresql://fun:fun@localhost:5432/fun
+      DATABASE_URL: postgresql://telegraph:telegraph@localhost:5432/telegraph
       SESSION_SECRET: ci-only-insecure-secret
       SKIP_DOCKER: "1"
     steps:

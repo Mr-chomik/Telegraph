@@ -15,6 +15,6 @@ export default defineConfig({
   datasource: {
     // Loaded from .env (root) above; fallback keeps `prisma generate` working
     // when no database is configured yet (e.g. image builds).
-    url: process.env.DATABASE_URL ?? "postgresql://fun:fun@localhost:5432/fun",
+    url: process.env.DATABASE_URL ?? "postgresql://telegraph:telegraph@localhost:5432/telegraph",
   },
 });

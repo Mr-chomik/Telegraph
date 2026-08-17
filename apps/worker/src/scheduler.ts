@@ -1,5 +1,5 @@
 import cron, { type ScheduledTask } from "node-cron";
-import { getEnv, log } from "@fun/core";
+import { getEnv, log } from "@telegraph/core";
 
 export type JobContext = {
   signal: "cron" | "startup" | "manual";
